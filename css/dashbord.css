@@ -1,0 +1,412 @@
+/* Estilos Gerais */
+:root {
+    --cor-primaria: #7f56d8;
+    --cor-primaria-escura: #6941c6;
+    --cor-texto-principal: #2e2c34;
+    --cor-texto-secundario: #84818a;
+    --cor-borda: #e7e7e7;
+    --cor-fundo: #f9f9fb;
+    --cor-fundo-componente: #ffffff;
+    --cor-em-andamento: #f8a534;
+    --cor-resolvido: #54c104;
+    --cor-novo: #3c8aff;
+    --cor-alta-prioridade: #fc372d;
+    --cor-fundo-alta-prioridade: #fef1f3;
+}
+
+.modo-escuro {
+    --cor-primaria: #9e77e0;
+    --cor-primaria-escura: #8a63d2;
+    --cor-texto-principal: #e4e2e8;
+    --cor-texto-secundario: #b5b3b9;
+    --cor-borda: #3a3a3a;
+    --cor-fundo: #1a1a1a;
+    --cor-fundo-componente: #2c2c2c;
+    --cor-em-andamento: #f8a534;
+    --cor-resolvido: #54c104;
+    --cor-novo: #3c8aff;
+    --cor-alta-prioridade: #fc372d;
+    --cor-fundo-alta-prioridade: #3d2a2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Botão de alternar tema */
+.alternar-tema {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#botao-tema {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Barra Lateral */
+.barra-lateral {
+    width: 250px;
+    background-color: var(--cor-fundo-componente);
+    border-right: 1px solid var(--cor-borda);
+    flex-shrink: 0;
+}
+
+.logo {
+    padding: 20px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.menu-navegacao li {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-navegacao li.ativo {
+    background-color: var(--cor-fundo-alta-prioridade);
+    color: var(--cor-primaria);
+}
+
+.menu-navegacao a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.icone {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Ícones (representados por placeholders) */
+.icone-dashboard::before {
+    content: "📊";
+}
+
+.icone-usuarios::before {
+    content: "👥";
+}
+
+.icone-tickets::before {
+    content: "🎫";
+}
+
+.icone-oficiais::before {
+    content: "👮";
+}
+
+.icone-configuracoes::before {
+    content: "⚙️";
+}
+
+.icone-menu::before {
+    content: "☰";
+}
+
+.icone-sino::before {
+    content: "🔔";
+}
+
+.icone-seta-baixo::before {
+    content: "▼";
+}
+
+.icone-seta::before {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--cor-fundo-componente);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.boas-vindas {
+    display: flex;
+    align-items: center;
+}
+
+.botao-menu {
+    background: none;
+    border: none;
+    margin-right: 15px;
+    cursor: pointer;
+    color: var(--cor-texto-secundario);
+    display: none;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.notificacao {
+    position: relative;
+    background: none;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+    color: var(--cor-texto-secundario);
+}
+
+.indicador-notificacao {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: var(--cor-alta-prioridade);
+    border-radius: 50%;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nome-usuario {
+    margin-right: 5px;
+}
+
+/* Seção de Tickets */
+.secao-tickets {
+    padding: 20px;
+}
+
+.secao-tickets h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Ticket */
+.ticket {
+    background-color: var(--cor-fundo-componente);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ticket-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.ticket-info {
+    display: flex;
+    align-items: center;
+}
+
+.indicador-status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.em-andamento {
+    background-color: var(--cor-em-andamento);
+}
+
+.resolvido {
+    background-color: var(--cor-resolvido);
+}
+
+.novo {
+    background-color: var(--cor-novo);
+}
+
+.ticket-id {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ticket-data {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.ticket-titulo {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.ticket-conteudo {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
+}
+
+.ticket-conteudo p {
+    margin-bottom: 10px;
+}
+
+.ticket-acoes {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Área de Resposta */
+.area-resposta {
+    border-top: 1px solid var(--cor-borda);
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.area-resposta h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.formulario-resposta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linha-formulario {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.campo-formulario {
+    flex: 1;
+    min-width: 200px;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    background-color: var(--cor-fundo-componente);
+    color: var(--cor-texto-principal);
+}
+
+.campo-selecao {
+    position: relative;
+}
+
+.acoes-formulario {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Botões */
+.botao-primario {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.botao-primario:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+.botao-secundario {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.botao-secundario:hover {
+    background-color: rgba(127, 86, 216, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .barra-lateral {
+        width: 100%;
+        display: none;
+    }
+    
+    .botao-menu {
+        display: block;
+    }
+    
+    .linha-formulario {
+        flex-direction: column;
+    }
+}

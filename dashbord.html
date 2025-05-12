@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Tickets</title>
+    <link rel="stylesheet" href="css/dashbord.css">
+</head>
+<body class="modo-claro">
+    <div class="alternar-tema">
+        <button id="botao-tema">Alternar Tema</button>
+    </div>
+    
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="barra-lateral">
+            <div class="logo">
+                <h1>TICKET LEAD</h1>
+            </div>
+            <nav class="menu-navegacao">
+                <ul>
+                    <li class="ativo"><a href="#"><span class="icone icone-dashboard"></span> Dashboard</a></li>
+                    <li><a href="#"><span class="icone icone-usuarios"></span> Usuários</a></li>
+                    <li><a href="#"><span class="icone icone-tickets"></span> Tickets</a></li>
+                    <li><a href="#"><span class="icone icone-oficiais"></span> Oficiais</a></li>
+                    <li><a href="#"><span class="icone icone-configuracoes"></span> Configurações do Site</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="conteudo-principal">
+            <!-- Cabeçalho -->
+            <header class="cabecalho">
+                <div class="boas-vindas">
+                    <button class="botao-menu" aria-label="Menu">
+                        <span class="icone icone-menu"></span>
+                    </button>
+                    <span>Bem-vindo! João Silva</span>
+                </div>
+                <div class="perfil-usuario">
+                    <button class="notificacao" aria-label="Notificações">
+                        <span class="icone icone-sino"></span>
+                        <span class="indicador-notificacao"></span>
+                    </button>
+                    <div class="usuario">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/placeholder-ob7miW3mUreePYfXdVwkpFWHthzoR5.svg?height=40&width=40" alt="Foto do usuário" class="avatar">
+                        <span class="nome-usuario">Alex Roberto</span>
+                        <span class="icone icone-seta-baixo"></span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Conteúdo do ticket -->
+            <section class="secao-tickets">
+                <h2>Tickets</h2>
+                
+                <article class="ticket" id="ticket-detalhes">
+                    <div class="ticket-cabecalho">
+                        <div class="ticket-info">
+                            <span class="indicador-status em-andamento"></span>
+                            <span class="ticket-id">Ticket# 2023-CS123</span>
+                        </div>
+                        <span class="ticket-data">Postado às 12:45</span>
+                    </div>
+                    
+                    <h3 class="ticket-titulo">Como depositar dinheiro no meu portal?</h3>
+                    
+                    <div class="ticket-conteudo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    
+                    <!-- Área de resposta (inicialmente oculta) -->
+                    <div class="area-resposta" id="area-resposta" style="display: none;">
+                        <h4>Responder ao Ticket</h4>
+                        
+                        <form class="formulario-resposta">
+                            <div class="linha-formulario">
+                                <div class="campo-formulario">
+                                    <label for="email-cliente">Email do Cliente</label>
+                                    <input type="email" id="email-cliente" value="xsasyd@gmail.com">
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="tipo-ticket">Tipo de Ticket</label>
+                                    <div class="campo-selecao">
+                                        <select id="tipo-ticket">
+                                            <option selected>Problema de Depósito</option>
+                                            <option>Problema de Saque</option>
+                                            <option>Problema de Login</option>
+                                        </select>
+                                        <span class="icone-seta"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="status-ticket">Status</label>
+                                    <div class="campo-selecao">
+                                        <select id="status-ticket">
+                                            <option selected>Em Andamento</option>
+                                            <option>Resolvido</option>
+                                            <option>Pendente</option>
+                                        </select>
+                                        <span class="icone-seta"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="corpo-ticket">Corpo do Ticket</label>
+                                <textarea id="corpo-ticket" rows="5" placeholder="Digite o problema do ticket aqui..."></textarea>
+                            </div>
+                            
+                            <div class="acoes-formulario">
+                                <button type="submit" class="botao-primario">Enviar Resposta</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="ticket-acoes">
+                        <button class="botao-abrir-ticket" class="botao-secundario">Abrir Ticket</button>
+                    </div>
+                </article>
+
+                 <article class="ticket" id="ticket-detalhes">
+                    <div class="ticket-cabecalho">
+                        <div class="ticket-info">
+                            <span class="indicador-status em-andamento"></span>
+                            <span class="ticket-id">Ticket# 2023-CS123</span>
+                        </div>
+                        <span class="ticket-data">Postado às 12:45</span>
+                    </div>
+                    
+                    <h3 class="ticket-titulo">Como depositar dinheiro no meu portal?</h3>
+                    
+                    <div class="ticket-conteudo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    
+                    <!-- Área de resposta (inicialmente oculta) -->
+                    <div class="area-resposta" id="area-resposta" style="display: none;">
+                        <h4>Responder ao Ticket</h4>
+                        
+                        <form class="formulario-resposta">
+                            <div class="linha-formulario">
+                                <div class="campo-formulario">
+                                    <label for="email-cliente">Email do Cliente</label>
+                                    <input type="email" id="email-cliente" value="xsasyd@gmail.com">
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="tipo-ticket">Tipo de Ticket</label>
+                                    <div class="campo-selecao">
+                                        <select id="tipo-ticket">
+                                            <option selected>Problema de Depósito</option>
+                                            <option>Problema de Saque</option>
+                                            <option>Problema de Login</option>
+                                        </select>
+                                        <span class="icone-seta"></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="status-ticket">Status</label>
+                                    <div class="campo-selecao">
+                                        <select id="status-ticket">
+                                            <option selected>Em Andamento</option>
+                                            <option>Resolvido</option>
+                                            <option>Pendente</option>
+                                        </select>
+                                        <span class="icone-seta"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="campo-formulario">
+                                <label for="corpo-ticket">Corpo do Ticket</label>
+                                <textarea id="corpo-ticket" rows="5" placeholder="Digite o problema do ticket aqui..."></textarea>
+                            </div>
+                            
+                            <div class="acoes-formulario">
+                                <button type="submit" class="botao-primario">Enviar Resposta</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="ticket-acoes">
+                        <button class="botao-abrir-ticket" class="botao-secundario">Abrir Ticket</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/dashborad.js"></script>
+</body>
+</html>
