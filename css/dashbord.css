@@ -7,13 +7,14 @@
 }
 
 :root {
-    --cor-primaria: #7f56d8;
-    --cor-primaria-escura: #6941c6;
+    --cor-primaria: #4f46e5;
+    --cor-primaria-escura: #4f46e5;
     --cor-primaria-clara: #9e77e0;
-    --cor-fundo-escuro: #1e1836;
-    --cor-fundo-escuro-secundario: #2a2344;
-    --cor-texto-claro: #ffffff;
-    --cor-texto-secundario: #b4b4b4;
+    --cor-fundo-escuro: #add2f7;
+    --cor-fundo-escuro-secundario: #4f46e5;
+    --cor-texto-escuro: #222325;
+    --cor-texto-claro: #f9f9fb;
+    --cor-texto-secundario: #222325;
     --cor-borda: #3a3352;
     --cor-fundo-claro: #f9f9fb;
     --cor-fundo-componente: #ffffff;
@@ -41,12 +42,13 @@ body {
 .menu-lateral {
     width: 250px;
     background-color: var(--cor-fundo-escuro);
-    color: var(--cor-texto-claro);
+    color: var(--cor-texto-escuro);
     height: 100vh;
     overflow-y: auto;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    border-right: 0.2px solid #222325; 
 }
 
 .logo {
@@ -57,7 +59,7 @@ body {
 .logo h1 {
     font-size: 20px;
     font-weight: bold;
-    color: var(--cor-texto-claro);
+    color: var(--cor-texto-escuro);
 }
 
 /* Perfil do Usuário no Sidebar */
@@ -81,7 +83,7 @@ body {
 
 .avatar-icon {
     font-size: 20px;
-    color: var(--cor-texto-claro);
+    color: var(--cor-texto-escuro);
 }
 
 .info-usuario {
@@ -91,7 +93,7 @@ body {
 .nome-usuario {
     font-size: 16px;
     font-weight: 500;
-    color: var(--cor-texto-claro);
+    color: var(--cor-texto-escuro);
     margin-bottom: 2px;
 }
 
@@ -120,12 +122,12 @@ body {
 
 .menu-item:hover {
     background-color: var(--cor-fundo-escuro-secundario);
-    color: var(--cor-texto-claro);
+    color: var(--cor-texto-escuro);
 }
 
 .menu-item.ativo {
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto-claro);
+   
+    color: var(--cor-texto-escuro);
 }
 
 .icone {
@@ -139,6 +141,7 @@ body {
 .botao-sair-container {
     padding: 20px;
     border-top: 1px solid var(--cor-borda);
+    text-decoration: none;
 }
 
 .botao-sair {
@@ -152,6 +155,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
+    
 }
 
 .botao-sair:hover {

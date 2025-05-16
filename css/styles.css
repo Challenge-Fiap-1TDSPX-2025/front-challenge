@@ -565,8 +565,8 @@ background: linear-gradient(90deg, rgba(200, 227, 247, 1) 0%, rgba(200, 227, 247
 
 /* Rodapé */
 .rodape {
-    background-color: #f9fafb;
-    border-top: 1px solid #e5e7eb;
+    background-color: #add2f7;
+    border-top: 1px solid #222325;
     padding: 60px 0 20px;
 }
 
@@ -582,7 +582,7 @@ background: linear-gradient(90deg, rgba(200, 227, 247, 1) 0%, rgba(200, 227, 247
 }
 
 .sobre-rodape p {
-    color: #6b7280;
+    color: #1f2124;
     font-size: 0.875rem;
     margin: 16px 0;
 }
@@ -612,7 +612,7 @@ background: linear-gradient(90deg, rgba(200, 227, 247, 1) 0%, rgba(200, 227, 247
 }
 
 .links-rodape a {
-    color: #6b7280;
+    color: #222325;
     font-size: 0.875rem;
     transition: color 0.3s ease;
 }
@@ -622,10 +622,10 @@ background: linear-gradient(90deg, rgba(200, 227, 247, 1) 0%, rgba(200, 227, 247
 }
 
 .rodape-inferior {
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #222325;
     padding-top: 20px;
     text-align: center;
-    color: #6b7280;
+    color: #222325;
     font-size: 0.875rem;
 }
 
@@ -638,7 +638,7 @@ background: linear-gradient(90deg, rgba(200, 227, 247, 1) 0%, rgba(200, 227, 247
 
 .legal-rodape a {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: #222325;
     transition: color 0.3s ease;
 }
 
