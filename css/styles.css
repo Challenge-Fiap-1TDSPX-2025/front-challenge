@@ -1,3 +1,5 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 /* Reset e estilos base */
 * {
     margin: 0;
@@ -174,7 +176,7 @@ img {
     width: 60%;
 }
 
-.imagem-hero>img {}
+/*.imagem-hero>img {}*/
 
 /* Seção de Soluções */
 .secao-solucoes {

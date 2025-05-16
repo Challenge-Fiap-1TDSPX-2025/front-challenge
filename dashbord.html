@@ -6,194 +6,308 @@
     <title>Sistema de Tickets</title>
     <link rel="stylesheet" href="css/dashbord.css">
 </head>
-<body class="modo-claro">
-    <div class="alternar-tema">
-        <button id="botao-tema">Alternar Tema</button>
-    </div>
-    
-    <div class="container">
-        <!-- Barra lateral -->
-        <aside class="barra-lateral">
+<body>
+    <div class="app-container">
+        <!-- Menu Lateral Esquerdo -->
+        <aside class="menu-lateral">
             <div class="logo">
                 <h1>TICKET LEAD</h1>
             </div>
+            
+            <!-- Perfil do Usuário -->
+            <div class="perfil-usuario-sidebar">
+                <div class="avatar-container">
+                    <span class="avatar-icon">👤</span>
+                </div>
+                <div class="info-usuario">
+                    <h3 class="nome-usuario">Carlos Silva</h3>
+                    <p class="email-usuario">carlos.silva@empresa.com</p>
+                </div>
+            </div>
+            
             <nav class="menu-navegacao">
                 <ul>
-                    <li class="ativo"><a href="#"><span class="icone icone-dashboard"></span> Dashboard</a></li>
-                    <li><a href="#"><span class="icone icone-usuarios"></span> Usuários</a></li>
-                    <li><a href="#"><span class="icone icone-tickets"></span> Tickets</a></li>
-                    <li><a href="#"><span class="icone icone-oficiais"></span> Oficiais</a></li>
-                    <li><a href="#"><span class="icone icone-configuracoes"></span> Configurações do Site</a></li>
+                    <li class="menu-item ativo">
+                        <span class="icone dashboard-icon">⊞</span>
+                        <span>Dashboard</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icone users-icon">👥</span>
+                        <span>Usuários</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icone tickets-icon">🎫</span>
+                        <span>Tickets</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icone officials-icon">👥</span>
+                        <span>Oficiais</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="icone settings-icon">⚙️</span>
+                        <span>Configurações</span>
+                    </li>
                 </ul>
             </nav>
+            
+            <!-- Botão de Sair -->
+            <div class="botao-sair-container">
+                <button class="botao-sair">
+                    <span class="icone-sair">↩</span>
+                    <span>Sair</span>
+                </button>
+            </div>
         </aside>
 
-        <!-- Conteúdo principal -->
-        <main class="conteudo-principal">
+        <!-- Conteúdo Principal -->
+        <div class="conteudo-principal">
             <!-- Cabeçalho -->
             <header class="cabecalho">
-                <div class="boas-vindas">
-                    <button class="botao-menu" aria-label="Menu">
-                        <span class="icone icone-menu"></span>
-                    </button>
-                    <span>Bem-vindo! João Silva</span>
+                <div class="titulo-container">
+                    <h1>Ticket</h1>
+                    <button class="botao-novo">Novo Ticket</button>
                 </div>
-                <div class="perfil-usuario">
-                    <button class="notificacao" aria-label="Notificações">
-                        <span class="icone icone-sino"></span>
-                        <span class="indicador-notificacao"></span>
-                    </button>
-                    <div class="usuario">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/placeholder-ob7miW3mUreePYfXdVwkpFWHthzoR5.svg?height=40&width=40" alt="Foto do usuário" class="avatar">
-                        <span class="nome-usuario">Alex Roberto</span>
-                        <span class="icone icone-seta-baixo"></span>
+                
+                <!-- Filtros -->
+                <div class="filtros">
+                    <div class="filtro">
+                        <select id="data-criacao">
+                            <option value="">Data de criação</option>
+                            <option value="hoje">Hoje</option>
+                            <option value="semana">Esta Semana</option>
+                            <option value="mes">Este Mês</option>
+                        </select>
                     </div>
+                    
+                    <div class="filtro">
+                        <select id="tipo-problema">
+                            <option value="">Tipo do problema</option>
+                            <option value="login">Login</option>
+                            <option value="pagamento">Pagamento</option>
+                            <option value="deposito">Depósito</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filtro busca">
+                        <input type="text" placeholder="Buscar ticket...">
+                    </div>
+                </div>
+                
+                <!-- Status Tabs -->
+                <div class="status-tabs">
+                    <button class="tab ativo" data-status="todos">
+                        <span class="indicador todos"></span>
+                        Todos os tickets
+                    </button>
+                    <button class="tab" data-status="abertos">
+                        <span class="indicador abertos"></span>
+                        Abertos
+                    </button>
+                    <button class="tab" data-status="andamento">
+                        <span class="indicador andamento"></span>
+                        Em andamento
+                    </button>
+                    <button class="tab" data-status="resolvidos">
+                        <span class="indicador resolvidos"></span>
+                        Tickets resolvidos
+                    </button>
                 </div>
             </header>
-
-            <!-- Conteúdo do ticket -->
-            <section class="secao-tickets">
-                <h2>Tickets</h2>
+            
+            <!-- Lista de Tickets -->
+            <main class="lista-tickets">
+                <!-- Ticket 1 -->
+                <div class="ticket" id="ticket-1" data-ticket-id="1">
+                    <div class="ticket-cabecalho">
+                        <div class="ticket-info">
+                            <span class="indicador andamento"></span>
+                            <span class="ticket-id">Ticket# 2023-T001</span>
+                        </div>
+                        <span class="ticket-data">Criado em: 15/05/2023 às 10:45</span>
+                    </div>
+                    
+                    <h3 class="ticket-titulo">Como depositar dinheiro na minha conta?</h3>
+                    
+                    <p class="ticket-descricao">
+                        Estou tentando fazer um depósito na minha conta, mas o sistema apresenta erro. 
+                        Já tentei várias vezes e não consigo completar a operação.
+                    </p>
+                    
+                    <div class="ticket-acoes">
+                        <button class="botao-abrir" data-ticket="1">Abrir Ticket</button>
+                    </div>
+                    
+                    <!-- Área de resposta (inicialmente oculta) -->
+                    <div class="area-resposta" id="resposta-1" style="display: none;">
+                        <textarea placeholder="Digite sua resposta aqui..."></textarea>
+                        <div class="botoes-resposta">
+                            <button class="botao-enviar">Enviar</button>
+                            <button class="botao-cancelar">Cancelar Rascunho</button>
+                        </div>
+                    </div>
+                </div>
                 
-                <article class="ticket" id="ticket-detalhes">
+                <!-- Ticket 2 -->
+                <div class="ticket" id="ticket-2" data-ticket-id="2">
                     <div class="ticket-cabecalho">
                         <div class="ticket-info">
-                            <span class="indicador-status em-andamento"></span>
-                            <span class="ticket-id">Ticket# 2023-CS123</span>
+                            <span class="indicador abertos"></span>
+                            <span class="ticket-id">Ticket# 2023-T002</span>
                         </div>
-                        <span class="ticket-data">Postado às 12:45</span>
+                        <span class="ticket-data">Criado em: 16/05/2023 às 14:30</span>
                     </div>
                     
-                    <h3 class="ticket-titulo">Como depositar dinheiro no meu portal?</h3>
+                    <h3 class="ticket-titulo">Problema com login no aplicativo</h3>
                     
-                    <div class="ticket-conteudo">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="ticket-descricao">
+                        Não consigo fazer login no aplicativo móvel. A senha está correta, 
+                        mas o sistema não reconhece meu usuário.
+                    </p>
+                    
+                    <div class="ticket-acoes">
+                        <button class="botao-abrir" data-ticket="2">Abrir Ticket</button>
                     </div>
                     
                     <!-- Área de resposta (inicialmente oculta) -->
-                    <div class="area-resposta" id="area-resposta" style="display: none;">
-                        <h4>Responder ao Ticket</h4>
-                        
-                        <form class="formulario-resposta">
-                            <div class="linha-formulario">
-                                <div class="campo-formulario">
-                                    <label for="email-cliente">Email do Cliente</label>
-                                    <input type="email" id="email-cliente" value="xsasyd@gmail.com">
-                                </div>
-                                
-                                <div class="campo-formulario">
-                                    <label for="tipo-ticket">Tipo de Ticket</label>
-                                    <div class="campo-selecao">
-                                        <select id="tipo-ticket">
-                                            <option selected>Problema de Depósito</option>
-                                            <option>Problema de Saque</option>
-                                            <option>Problema de Login</option>
-                                        </select>
-                                        <span class="icone-seta"></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="campo-formulario">
-                                    <label for="status-ticket">Status</label>
-                                    <div class="campo-selecao">
-                                        <select id="status-ticket">
-                                            <option selected>Em Andamento</option>
-                                            <option>Resolvido</option>
-                                            <option>Pendente</option>
-                                        </select>
-                                        <span class="icone-seta"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="campo-formulario">
-                                <label for="corpo-ticket">Corpo do Ticket</label>
-                                <textarea id="corpo-ticket" rows="5" placeholder="Digite o problema do ticket aqui..."></textarea>
-                            </div>
-                            
-                            <div class="acoes-formulario">
-                                <button type="submit" class="botao-primario">Enviar Resposta</button>
-                            </div>
-                        </form>
+                    <div class="area-resposta" id="resposta-2" style="display: none;">
+                        <textarea placeholder="Digite sua resposta aqui..."></textarea>
+                        <div class="botoes-resposta">
+                            <button class="botao-enviar">Enviar</button>
+                            <button class="botao-cancelar">Cancelar Rascunho</button>
+                        </div>
                     </div>
-                    
-                    <div class="ticket-acoes">
-                        <button class="botao-abrir-ticket" class="botao-secundario">Abrir Ticket</button>
-                    </div>
-                </article>
-
-                 <article class="ticket" id="ticket-detalhes">
+                </div>
+                
+                <!-- Ticket 3 -->
+                <div class="ticket" id="ticket-3" data-ticket-id="3">
                     <div class="ticket-cabecalho">
                         <div class="ticket-info">
-                            <span class="indicador-status em-andamento"></span>
-                            <span class="ticket-id">Ticket# 2023-CS123</span>
+                            <span class="indicador resolvidos"></span>
+                            <span class="ticket-id">Ticket# 2023-T003</span>
                         </div>
-                        <span class="ticket-data">Postado às 12:45</span>
+                        <span class="ticket-data">Criado em: 14/05/2023 às 09:15</span>
                     </div>
                     
-                    <h3 class="ticket-titulo">Como depositar dinheiro no meu portal?</h3>
+                    <h3 class="ticket-titulo">Não recebi o comprovante de pagamento</h3>
                     
-                    <div class="ticket-conteudo">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="ticket-descricao">
+                        Realizei um pagamento ontem, mas não recebi o comprovante por e-mail 
+                        como de costume. Preciso desse documento para fins fiscais.
+                    </p>
+                    
+                    <div class="ticket-acoes">
+                        <button class="botao-abrir" data-ticket="3">Abrir Ticket</button>
                     </div>
                     
                     <!-- Área de resposta (inicialmente oculta) -->
-                    <div class="area-resposta" id="area-resposta" style="display: none;">
-                        <h4>Responder ao Ticket</h4>
-                        
-                        <form class="formulario-resposta">
-                            <div class="linha-formulario">
-                                <div class="campo-formulario">
-                                    <label for="email-cliente">Email do Cliente</label>
-                                    <input type="email" id="email-cliente" value="xsasyd@gmail.com">
-                                </div>
-                                
-                                <div class="campo-formulario">
-                                    <label for="tipo-ticket">Tipo de Ticket</label>
-                                    <div class="campo-selecao">
-                                        <select id="tipo-ticket">
-                                            <option selected>Problema de Depósito</option>
-                                            <option>Problema de Saque</option>
-                                            <option>Problema de Login</option>
-                                        </select>
-                                        <span class="icone-seta"></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="campo-formulario">
-                                    <label for="status-ticket">Status</label>
-                                    <div class="campo-selecao">
-                                        <select id="status-ticket">
-                                            <option selected>Em Andamento</option>
-                                            <option>Resolvido</option>
-                                            <option>Pendente</option>
-                                        </select>
-                                        <span class="icone-seta"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="campo-formulario">
-                                <label for="corpo-ticket">Corpo do Ticket</label>
-                                <textarea id="corpo-ticket" rows="5" placeholder="Digite o problema do ticket aqui..."></textarea>
-                            </div>
-                            
-                            <div class="acoes-formulario">
-                                <button type="submit" class="botao-primario">Enviar Resposta</button>
-                            </div>
-                        </form>
+                    <div class="area-resposta" id="resposta-3" style="display: none;">
+                        <textarea placeholder="Digite sua resposta aqui..."></textarea>
+                        <div class="botoes-resposta">
+                            <button class="botao-enviar">Enviar</button>
+                            <button class="botao-cancelar">Cancelar Rascunho</button>
+                        </div>
                     </div>
-                    
-                    <div class="ticket-acoes">
-                        <button class="botao-abrir-ticket" class="botao-secundario">Abrir Ticket</button>
+                </div>
+            </main>
+        </div>
+        
+        <!-- Painel Lateral de Detalhes do Ticket (inicialmente oculto) -->
+        <aside class="painel-detalhes" id="painel-detalhes">
+            <div class="painel-cabecalho">
+                <h2>Detalhes do Ticket</h2>
+                <button class="botao-fechar" id="fechar-painel">&times;</button>
+            </div>
+            
+            <div class="painel-conteudo">
+                <div class="ticket-info-detalhada">
+                    <h3 id="detalhe-titulo">Título do Ticket</h3>
+                    <div class="ticket-meta">
+                        <span id="detalhe-id">Ticket# 2023-T001</span>
+                        <span id="detalhe-data">Criado em: 15/05/2023</span>
                     </div>
-                </article>
-            </section>
-        </main>
+                    <div class="ticket-status">
+                        <span class="indicador" id="detalhe-indicador"></span>
+                        <span id="detalhe-status">Em andamento</span>
+                    </div>
+                    <p id="detalhe-descricao">Descrição do ticket...</p>
+                </div>
+                
+                <div class="acoes-ticket">
+                    <h4>Ações</h4>
+                    <div class="botoes-acao">
+                        <button class="acao-btn responder">Responder</button>
+                        <button class="acao-btn anotar">Adicionar Anotação</button>
+                        <button class="acao-btn encaminhar">Encaminhar</button>
+                    </div>
+                </div>
+                
+                <div class="propriedades-ticket">
+                    <h4>Propriedades do Ticket</h4>
+                    <div class="propriedade">
+                        <label>Agente Responsável</label>
+                        <select id="agente-responsavel">
+                            <option value="1">Carlos Silva</option>
+                            <option value="2">Maria Oliveira</option>
+                            <option value="3">João Santos</option>
+                        </select>
+                    </div>
+                    <div class="propriedade">
+                        <label>Status do Ticket</label>
+                        <select id="status-ticket">
+                            <option value="aberto">Aberto</option>
+                            <option value="andamento">Em andamento</option>
+                            <option value="resolvido">Resolvido</option>
+                        </select>
+                    </div>
+                    <div class="propriedade">
+                        <label>Prioridade</label>
+                        <select id="prioridade-ticket">
+                            <option value="baixa">Baixa</option>
+                            <option value="media">Média</option>
+                            <option value="alta">Alta</option>
+                            <option value="urgente">Urgente</option>
+                        </select>
+                    </div>
+                    <button class="botao-atualizar">Atualizar</button>
+                </div>
+                
+                <div class="area-resposta-painel" style="display: none;">
+                    <h4>Responder ao Ticket</h4>
+                    <textarea placeholder="Digite sua resposta aqui..."></textarea>
+                    <div class="botoes-resposta">
+                        <button class="botao-enviar-painel">Enviar</button>
+                        <button class="botao-cancelar-painel">Cancelar</button>
+                    </div>
+                </div>
+                
+                <div class="area-anotacao" style="display: none;">
+                    <h4>Adicionar Anotação Interna</h4>
+                    <textarea placeholder="Digite sua anotação aqui..."></textarea>
+                    <div class="botoes-resposta">
+                        <button class="botao-salvar-anotacao">Salvar</button>
+                        <button class="botao-cancelar-anotacao">Cancelar</button>
+                    </div>
+                </div>
+                
+                <div class="area-encaminhar" style="display: none;">
+                    <h4>Encaminhar Ticket</h4>
+                    <div class="propriedade">
+                        <label>Encaminhar para</label>
+                        <select id="encaminhar-para">
+                            <option value="">Selecione um departamento</option>
+                            <option value="suporte">Suporte Técnico</option>
+                            <option value="financeiro">Financeiro</option>
+                            <option value="vendas">Vendas</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Adicione uma mensagem (opcional)..."></textarea>
+                    <div class="botoes-resposta">
+                        <button class="botao-encaminhar">Encaminhar</button>
+                        <button class="botao-cancelar-encaminhar">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </div>
 
     <script src="js/dashborad.js"></script>
