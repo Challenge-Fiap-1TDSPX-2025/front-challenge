@@ -1,8 +1,8 @@
 /* Estilos específicos para a página de FAQ */
 .secao-faq {
   padding: 80px 0;
-  background-color: #111827;
-  color: #fff;
+  background-color: #add2f7;
+  color: #1a1818;
   min-height: 70vh;
 }
 
@@ -16,11 +16,11 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 16px;
-  color: #fff;
+  color: #111010;
 }
 
 .secao-faq .cabecalho-secao p {
-  color: #9ca3af;
+  color: #1b1c1d;
   font-size: 1.25rem;
 }
 
@@ -38,7 +38,8 @@
 }
 
 .item-faq:hover {
-  border-color: #9e77e0;
+  border-color: #4f46e5;
+;
 }
 
 .pergunta-faq {
@@ -52,7 +53,7 @@
 .numero-pergunta {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #9e77e0;
+  color: #4f46e5;
   margin-right: 16px;
   min-width: 30px;
 }
@@ -71,7 +72,7 @@
   border-radius: 50%;
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: #111010;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +83,7 @@
 }
 
 .item-faq.ativo .botao-toggle {
-  background-color: #9e77e0;
+  background-color: #4f46e5;
   transform: rotate(180deg);
 }
 
@@ -107,7 +108,7 @@
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.3s ease;
   padding: 0 20px;
-  color: #d1d5db;
+  color: #1f2022;
 }
 
 .item-faq.ativo .resposta-faq {
@@ -140,14 +141,14 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #9e77e0;
+  background-color: #4f46e5;
 }
 
 .contato-faq {
   text-align: center;
   margin-top: 60px;
   padding: 30px;
-  background-color: #1f2937;
+  background-color: #8ac0f7d8;
   border-radius: 8px;
 }
 
@@ -157,18 +158,18 @@
 }
 
 .contato-faq p {
-  color: #9ca3af;
+  color: #2a2b2c;
   margin-bottom: 24px;
 }
 
 .contato-faq .botao-primario {
-  background-color: #9e77e0;
-  border-color: #9e77e0;
+  background-color: #4f46e5;
+  border-color: #4f46e5;
 }
 
 .contato-faq .botao-primario:hover {
-  background-color: #8a63d2;
-  border-color: #8a63d2;
+  background-color: #4f46e5;
+  border-color: #4f46e5;
 }
 
 /* Responsividade */

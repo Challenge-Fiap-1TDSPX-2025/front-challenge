@@ -18,8 +18,9 @@
     --cor-fundo-claro: #f9f9fb;
     --cor-fundo-componente: #ffffff;
     --cor-texto-escuro: #333333;
+    --cor-todos-tickets:rgb(44, 99, 248);
     --cor-em-andamento: #f8a534;
-    --cor-abertos: #3c8aff;
+    --cor-abertos: #ff3c3c;
     --cor-resolvidos: #54c104;
 }
 
@@ -268,7 +269,7 @@ body {
 }
 
 .indicador.todos {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-todos-tickets);
 }
 
 .indicador.abertos {
