@@ -334,8 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (botaoSair) {
         botaoSair.addEventListener('click', function() {
             if (confirm('Tem certeza que deseja sair do sistema?')) {
-                alert('Você saiu do sistema com sucesso!');
-                // Aqui você redirecionaria para a página de login em um sistema real
+                
             }
         });
     }

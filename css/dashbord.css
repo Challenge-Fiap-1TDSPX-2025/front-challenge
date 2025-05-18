@@ -40,7 +40,7 @@ body {
 
 /* Menu Lateral Esquerdo */
 .menu-lateral {
-    width: 250px;
+    width: 300px;
     background-color: var(--cor-fundo-escuro);
     color: var(--cor-texto-escuro);
     height: 100vh;
