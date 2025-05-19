@@ -96,10 +96,17 @@ img {
     font-weight: 700;
 }
 
+.logo > a > span {
+    color: #4338ca;
+}
+
 .logo i {
     color: #4f46e5;
 }
-
+#logo-header{
+    width: 65px;
+    height: 65px;
+}
 .botao-menu-mobile {
     display: none;
     background: none;

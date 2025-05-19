@@ -393,6 +393,15 @@ body {
     cursor: pointer;
 }
 
+.botao-excluir{
+    background-color: rgb(241, 58, 58);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .botao-enviar:hover, .botao-enviar-painel:hover, .botao-salvar-anotacao:hover, .botao-encaminhar:hover, .botao-atualizar:hover {
     background-color: var(--cor-primaria-escura);
 }
