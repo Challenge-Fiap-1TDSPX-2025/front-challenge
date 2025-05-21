@@ -312,6 +312,7 @@ background: linear-gradient(90deg, rgba(200, 227, 247, 1) 0%, rgba(200, 227, 247
     direction: ltr;
 }
 
+
 .conteudo-recurso h3 {
     font-size: 1.75rem;
     font-weight: 700;
@@ -360,7 +361,15 @@ background: linear-gradient(90deg, rgba(200, 227, 247, 1) 0%, rgba(200, 227, 247
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    height: 331px;
+    width: 496px;
 }
+
+.imagem-recurso > img{
+    height: 100%;
+    width: 100%;
+}
+
 
 /* Seção de Benefícios */
 .secao-beneficios {

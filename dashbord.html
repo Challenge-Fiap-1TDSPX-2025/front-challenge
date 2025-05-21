@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Tickets</title>
     <link rel="stylesheet" href="css/dashbord.css">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Menu Lateral Esquerdo -->
         <aside class="menu-lateral">
             <div class="logo">
-                <h1>TICKET LEAD</h1>
+                <h1>Health Support</h1>
             </div>
-            
+
             <!-- Perfil do Usuário -->
             <div class="perfil-usuario-sidebar">
                 <div class="avatar-container">
@@ -24,7 +26,7 @@
                     <p class="email-usuario">carlos.silva@empresa.com</p>
                 </div>
             </div>
-            
+
             <nav class="menu-navegacao">
                 <ul>
                     <li class="menu-item ativo">
@@ -45,7 +47,7 @@
                     </li>
                 </ul>
             </nav>
-            
+
             <!-- Botão de Sair -->
             <a href="index.html" class="botao-sair-container">
                 <button class="botao-sair" a>
@@ -56,14 +58,14 @@
         </aside>
 
         <!-- Conteúdo Principal -->
-        <div class="conteudo-principal">
+        <section class="conteudo-principal">
             <!-- Cabeçalho -->
             <header class="cabecalho">
                 <div class="titulo-container">
                     <h1>Ticket</h1>
                     <button class="botao-novo">Novo Ticket</button>
                 </div>
-                
+
                 <!-- Filtros -->
                 <div class="filtros">
                     <div class="filtro">
@@ -74,7 +76,7 @@
                             <option value="mes">Este Mês</option>
                         </select>
                     </div>
-                    
+
                     <div class="filtro">
                         <select id="tipo-problema">
                             <option value="">Tipo do problema</option>
@@ -83,12 +85,12 @@
                             <option value="deposito">Depósito</option>
                         </select>
                     </div>
-                    
+
                     <div class="filtro busca">
                         <input type="text" placeholder="Buscar ticket...">
                     </div>
                 </div>
-                
+
                 <!-- Status Tabs -->
                 <div class="status-tabs">
                     <button class="tab ativo" data-status="todos">
@@ -109,7 +111,7 @@
                     </button>
                 </div>
             </header>
-            
+
             <!-- Lista de Tickets -->
             <main class="lista-tickets">
                 <!-- Ticket 1 -->
@@ -121,18 +123,18 @@
                         </div>
                         <span class="ticket-data">Criado em: 15/05/2023 às 10:45</span>
                     </div>
-                    
+
                     <h3 class="ticket-titulo">Como depositar dinheiro na minha conta?</h3>
-                    
+
                     <p class="ticket-descricao">
-                        Estou tentando fazer um depósito na minha conta, mas o sistema apresenta erro. 
+                        Estou tentando fazer um depósito na minha conta, mas o sistema apresenta erro.
                         Já tentei várias vezes e não consigo completar a operação.
                     </p>
-                    
+
                     <div class="ticket-acoes">
                         <button class="botao-abrir" data-ticket="1">Abrir Ticket</button>
                     </div>
-                    
+
                     <!-- Área de resposta (inicialmente oculta) -->
                     <div class="area-resposta" id="resposta-1" style="display: none;">
                         <textarea placeholder="Digite sua resposta aqui..."></textarea>
@@ -142,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Ticket 2 -->
                 <div class="ticket" id="ticket-2" data-ticket-id="2">
                     <div class="ticket-cabecalho">
@@ -152,18 +154,18 @@
                         </div>
                         <span class="ticket-data">Criado em: 16/05/2023 às 14:30</span>
                     </div>
-                    
+
                     <h3 class="ticket-titulo">Problema com login no aplicativo</h3>
-                    
+
                     <p class="ticket-descricao">
-                        Não consigo fazer login no aplicativo móvel. A senha está correta, 
+                        Não consigo fazer login no aplicativo móvel. A senha está correta,
                         mas o sistema não reconhece meu usuário.
                     </p>
-                    
+
                     <div class="ticket-acoes">
                         <button class="botao-abrir" data-ticket="2">Abrir Ticket</button>
                     </div>
-                    
+
                     <!-- Área de resposta (inicialmente oculta) -->
                     <div class="area-resposta" id="resposta-2" style="display: none;">
                         <textarea placeholder="Digite sua resposta aqui..."></textarea>
@@ -173,7 +175,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Ticket 3 -->
                 <div class="ticket" id="ticket-3" data-ticket-id="3">
                     <div class="ticket-cabecalho">
@@ -183,18 +185,18 @@
                         </div>
                         <span class="ticket-data">Criado em: 14/05/2023 às 09:15</span>
                     </div>
-                    
+
                     <h3 class="ticket-titulo">Não recebi o comprovante de pagamento</h3>
-                    
+
                     <p class="ticket-descricao">
-                        Realizei um pagamento ontem, mas não recebi o comprovante por e-mail 
+                        Realizei um pagamento ontem, mas não recebi o comprovante por e-mail
                         como de costume. Preciso desse documento para fins fiscais.
                     </p>
-                    
+
                     <div class="ticket-acoes">
                         <button class="botao-abrir" data-ticket="3">Abrir Ticket</button>
                     </div>
-                    
+
                     <!-- Área de resposta (inicialmente oculta) -->
                     <div class="area-resposta" id="resposta-3" style="display: none;">
                         <textarea placeholder="Digite sua resposta aqui..."></textarea>
@@ -204,16 +206,17 @@
                         </div>
                     </div>
                 </div>
+
             </main>
-        </div>
-        
+        </section>
+
         <!-- Painel Lateral de Detalhes do Ticket (inicialmente oculto) -->
         <aside class="painel-detalhes" id="painel-detalhes">
             <div class="painel-cabecalho">
                 <h2>Detalhes do Ticket</h2>
                 <button class="botao-fechar" id="fechar-painel">&times;</button>
             </div>
-            
+
             <div class="painel-conteudo">
                 <div class="ticket-info-detalhada">
                     <h3 id="detalhe-titulo">Título do Ticket</h3>
@@ -227,7 +230,7 @@
                     </div>
                     <p id="detalhe-descricao">Descrição do ticket...</p>
                 </div>
-                
+
                 <div class="acoes-ticket">
                     <h4>Ações</h4>
                     <div class="botoes-acao">
@@ -236,7 +239,7 @@
                         <button class="acao-btn encaminhar">Encaminhar</button>
                     </div>
                 </div>
-                
+
                 <div class="propriedades-ticket">
                     <h4>Propriedades do Ticket</h4>
                     <div class="propriedade">
@@ -266,9 +269,9 @@
                     </div>
                     <button class="botao-atualizar">Atualizar</button>
                     <button class="botao-excluir">Excluir Ticket</button>
-                   
+
                 </div>
-                
+
                 <div class="area-resposta-painel" style="display: none;">
                     <h4>Responder ao Ticket</h4>
                     <textarea placeholder="Digite sua resposta aqui..."></textarea>
@@ -277,7 +280,7 @@
                         <button class="botao-cancelar-painel">Cancelar</button>
                     </div>
                 </div>
-                
+
                 <div class="area-anotacao" style="display: none;">
                     <h4>Adicionar Anotação Interna</h4>
                     <textarea placeholder="Digite sua anotação aqui..."></textarea>
@@ -286,7 +289,7 @@
                         <button class="botao-cancelar-anotacao">Cancelar</button>
                     </div>
                 </div>
-                
+
                 <div class="area-encaminhar" style="display: none;">
                     <h4>Encaminhar Ticket</h4>
                     <div class="propriedade">
@@ -305,9 +308,33 @@
                     </div>
                 </div>
             </div>
+
         </aside>
+
+        <!-- Modal de Confirmação de Exclusão -->
+        <div class="modal-overlay" id="modal-excluir">
+            <div class="modal">
+                <div class="modal-cabecalho">
+                    <h3>Confirmar Exclusão</h3>
+                    <button class="botao-fechar-modal">&times;</button>
+                </div>
+                <div class="modal-conteudo">
+                    <p>Tem certeza que deseja excluir este ticket?</p>
+                    <p class="aviso">Esta ação não pode ser desfeita.</p>
+                </div>
+                <div class="modal-acoes">
+                    <button class="botao-cancelar-modal">Cancelar</button>
+                    <button class="botao-confirmar-excluir">Sim, Excluir</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    </div>
+    
+
 
     <script src="js/dashborad.js"></script>
 </body>
+
 </html>
