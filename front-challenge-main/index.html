@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSupport - Soluções de Atendimento para Saúde</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="conteiner">
+            <div class="logo">
+                <img src="img/logo-challenge.png" id="logo-header">
+                <a href="index.html"><span>HealthSupport</span></a>
+            </div>
+
+            <!-- Botão do menu mobile -->
+            <button class="botao-menu-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navegação desktop -->
+            <nav class="navegacao-desktop">
+                <a href="#solucoes">Soluções</a>
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#depoimentos">Depoimentos</a>
+
+                <a href="contato.html">Contato</a>
+                <a href="dashbord.html" class="botao botao-primario">Entrar</a>
+                <a href="#comecar" class="botao botao-primario">Cadastre-se</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="secao-hero">
+            <div class="conteiner">
+                <div class="conteudo-hero">
+                    <div class="texto-hero">
+                        <h1>Atendimento Eficiente e Inteligente para Profissionais de Saúde</h1>
+                        <p>Gerencie tickets de dúvidas e ofereça respostas automáticas com IA para seus pacientes, tudo
+                            em uma única plataforma.</p>
+                        <div class="botoes-hero">
+                            <a href="dashbord.html" class="botao botao-primario">Entrar <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+
+                        </div>
+                    </div>
+                    <div class="imagem-hero">
+                        <img src="img/pexels-karolina-grabowska-7195310.jpg" alt="HealthSupport Dashboard">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Soluções -->
+        <section id="solucoes" class="secao-solucoes">
+            <div class="conteiner">
+                <div class="cabecalho-secao">
+                    <div class="distintivo">Nossas Soluções</div>
+                    <h2>Duas Ferramentas Poderosas em Uma Plataforma</h2>
+                    <p>Otimize seu atendimento com nossas soluções integradas para profissionais de saúde.</p>
+                </div>
+
+                <div class="grade-solucoes">
+                    <!-- Solução 1: Gerenciador de Tickets -->
+                    <div class="cartao-solucao">
+                        <div class="icone-solucao">
+                            <img src="img/ticket.png" alt="imagem de dois tickets superexpostos" class="func-icons">
+                        </div>
+                        <h3>Gerenciador de Tickets</h3>
+                        <p class="descricao-solucao">Sistema completo para gerenciar dúvidas e solicitações dos seus
+                            pacientes.</p>
+
+                        <ul class="recursos-solucao">
+                            <li><i class="item-card-solucao"></i> Organize tickets por tipo de problema</li>
+                            <li><i class="item-card-solucao"></i> Atualize status: aberto, em andamento e fechado</li>
+                            <li><i class="item-card-solucao"></i> Priorize atendimentos urgentes</li>
+                            <li><i class="item-card-solucao"></i> Histórico completo de interações</li>
+                        </ul>
+
+                        <a href="dashbord.html" class="botao botao-contorno botao-completo">Saiba Mais</a>
+                    </div>
+
+                    <!-- Solução 2: Chat IA -->
+                    <div class="cartao-solucao">
+                        <div class="icone-solucao">
+                            <img src="img/bot.png" alt="imagem de dois tickets superexpostos" class="func-icons">
+                        </div>
+                        <h3>Chat IA para Pacientes</h3>
+                        <p class="descricao-solucao">Assistente virtual inteligente para responder dúvidas comuns dos
+                            seus pacientes.</p>
+
+                        <ul class="recursos-solucao">
+                            <li><i class="item-card-solucao"></i> Respostas automáticas 24/7</li>
+                            <li><i class="item-card-solucao"></i> Base de conhecimento personalizável</li>
+                            <li><i class="item-card-solucao"></i> Encaminhamento para humanos quando necessário</li>
+                            <li><i class="item-card-solucao"></i> Aprendizado contínuo com novas interações</li>
+                        </ul>
+
+                        <a href="#chat-ia" class="botao botao-contorno botao-completo">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Como Funciona -->
+        <section id="como-funciona" class="secao-como-funciona">
+            <div class="conteiner">
+                <div class="cabecalho-secao">
+                    <div class="distintivo">Como Funciona</div>
+                    <h2>Simplifique seu Atendimento em 3 Passos</h2>
+                    <p>Nossa plataforma foi projetada para ser intuitiva e fácil de usar.</p>
+                </div>
+
+                <!-- Gerenciador de Tickets -->
+                <div id="gerenciador-tickets" class="vitrine-recurso">
+                    <div class="conteudo-recurso">
+                        <h3>Gerenciador de Tickets</h3>
+                        <div class="passos">
+                            <div class="passo">
+                                <div class="numero-passo">1</div>
+                                <div class="conteudo-passo">
+                                    <h4>Receba Dúvidas</h4>
+                                    <p>Os pacientes enviam suas dúvidas através de formulários, e-mail ou WhatsApp, que
+                                        são automaticamente convertidos em tickets.</p>
+                                </div>
+                            </div>
+
+                            <div class="passo">
+                                <div class="numero-passo">2</div>
+                                <div class="conteudo-passo">
+                                    <h4>Organize e Priorize</h4>
+                                    <p>Classifique os tickets por tipo de problema, urgência e departamento. Atribua
+                                        responsáveis e defina prazos.</p>
+                                </div>
+                            </div>
+
+                            <div class="passo">
+                                <div class="numero-passo">3</div>
+                                <div class="conteudo-passo">
+                                    <h4>Acompanhe e Resolva</h4>
+                                    <p>Atualize o status dos tickets conforme o atendimento progride e mantenha os
+                                        pacientes informados em cada etapa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imagem-recurso">
+                        <img src="img/7709378_3731957 1.png">
+                    </div>
+                </div>
+
+                <!-- Chat IA -->
+                <div id="chat-ia" class="vitrine-recurso inverso">
+                    <div class="conteudo-recurso">
+                        <h3>Chat IA para Pacientes</h3>
+                        <div class="passos">
+                            <div class="passo">
+                                <div class="numero-passo">1</div>
+                                <div class="conteudo-passo">
+                                    <h4>Configure sua Base de Conhecimento</h4>
+                                    <p>Alimente o sistema com informações sobre procedimentos, horários, preparos e
+                                        outras dúvidas frequentes.</p>
+                                </div>
+                            </div>
+
+                            <div class="passo">
+                                <div class="numero-passo">2</div>
+                                <div class="conteudo-passo">
+                                    <h4>Ative o Assistente Virtual</h4>
+                                    <p>Integre o chat ao seu site, aplicativo ou WhatsApp para que os pacientes possam
+                                        fazer perguntas a qualquer momento.</p>
+                                </div>
+                            </div>
+
+                            <div class="passo">
+                                <div class="numero-passo">3</div>
+                                <div class="conteudo-passo">
+                                    <h4>Monitore e Aprimore</h4>
+                                    <p>Acompanhe as interações, identifique novas dúvidas comuns e melhore continuamente
+                                        as respostas da IA.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="imagem-recurso">
+                        <img src="img/26601499_85z_2201_w009_n001_95c_p6_95 1.png" alt="Chat IA">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Benefícios -->
+        <section class="secao-beneficios">
+            <div class="conteiner">
+                <div class="cabecalho-secao">
+                    <div class="distintivo">Benefícios</div>
+                    <h2>Por que escolher nossa plataforma?</h2>
+                    <p>Veja como nossas soluções podem transformar seu atendimento.</p>
+                </div>
+
+                <div class="grade-beneficios">
+                    <div class="cartao-beneficio">
+                        <div class="icone-beneficio">
+                            <img src="img/timer.png"
+                                alt="Cronômetro parcialmente decorrido, mostrando o tempo em andamento "
+                                class="func-icons">
+                        </div>
+                        <h3>Economia de Tempo</h3>
+                        <p>Reduza em até 70% o tempo gasto com dúvidas repetitivas e gerenciamento de solicitações.</p>
+                    </div>
+
+                    <div class="cartao-beneficio">
+                        <div class="icone-beneficio">
+                            <img src="img/line-chart.png"
+                                alt="Cronômetro parcialmente decorrido, mostrando o tempo em andamento "
+                                class="func-icons">
+                        </div>
+                        <h3>Aumento da Produtividade</h3>
+                        <p>Atenda mais pacientes com a mesma equipe e foque no que realmente importa.</p>
+                    </div>
+
+                    <div class="cartao-beneficio">
+                        <div class="icone-beneficio">
+                            <img src="img/feedback.png"
+                                alt="Cronômetro parcialmente decorrido, mostrando o tempo em andamento "
+                                class="func-icons">
+                        </div>
+                        <h3>Satisfação do Paciente</h3>
+                        <p>Respostas rápidas e precisas aumentam a satisfação e fidelização dos seus pacientes.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section id="depoimentos" class="secao-depoimentos">
+            <div class="conteiner">
+                <div class="cabecalho-secao">
+                    <div class="distintivo">Depoimentos</div>
+                    <h2>O que nossos clientes dizem</h2>
+                    <p>Veja como nossas soluções estão ajudando profissionais de saúde.</p>
+                </div>
+
+                <div class="grade-depoimentos">
+                    <div class="cartao-depoimento">
+                        <p>"O gerenciador de tickets organizou completamente nosso fluxo de atendimento. Conseguimos
+                            reduzir o tempo de resposta em 60% e os pacientes estão muito mais satisfeitos."</p>
+                        <div class="autor-depoimento">
+                            <div class="avatar-autor">
+                                <img src="img/profile-user.png" alt="foto de perfil de uma pessoa">
+                            </div>
+                            <div class="info-autor">
+                                <p class="nome-autor">Dra. Carla Mendes</p>
+                                <p class="titulo-autor">Clínica Saúde Total</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cartao-depoimento">
+                        <p>"O Chat IA é incrível! Ele responde as dúvidas mais comuns dos pacientes 24 horas por dia,
+                            liberando nossa equipe para focar em casos mais complexos. Um investimento que se pagou em
+                            semanas."</p>
+                        <div class="autor-depoimento">
+                            <div class="avatar-autor">
+                                <img src="img/profile-user.png" alt="foto de perfil de uma pessoa">
+                            </div>
+                            <div class="info-autor">
+                                <p class="nome-autor">Dr. Ricardo Alves</p>
+                                <p class="titulo-autor">Centro Médico Bem Estar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cartao-depoimento">
+                        <p>"A combinação das duas ferramentas revolucionou nosso atendimento. Os pacientes recebem
+                            respostas instantâneas via IA e, quando necessário, seus casos são convertidos em tickets
+                            para nossa equipe resolver."</p>
+                        <div class="autor-depoimento">
+                            <div class="avatar-autor">
+                                <img src="img/profile-user.png" alt="foto de perfil de uma pessoa">
+                            </div>
+                            <div class="info-autor">
+                                <p class="nome-autor">Dra. Patrícia Santos</p>
+                                <p class="titulo-autor">Hospital São Lucas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Preços -->
+        <section id="precos" class="secao-precos">
+            <div class="conteiner">
+                <div class="cabecalho-secao">
+                    <div class="distintivo">Preços</div>
+                    <h2>Planos Flexíveis para Cada Necessidade</h2>
+                    <p>Escolha o plano ideal para o tamanho da sua prática ou clínica.</p>
+                </div>
+
+                <div class="grade-precos">
+                    <!-- Plano Básico -->
+                    <div class="cartao-preco">
+                        <div class="cabecalho-preco">
+                            <h3>Básico</h3>
+                            <p>Ideal para profissionais individuais.</p>
+                        </div>
+                        <div class="preco">
+                            <span class="valor">R$199</span>
+                            <span class="periodo">/mês</span>
+                        </div>
+                        <ul class="recursos-preco">
+                            <li><i class="item-card-plano"></i> Gerenciador de Tickets</li>
+                            <li><i class="item-card-plano"></i> Até 100 tickets/mês</li>
+                            <li><i class="item-card-plano"></i> Chat IA básico</li>
+                            <li><i class="item-card-plano"></i> 1 usuário</li>
+                            <li><i class="item-card-plano"></i> Suporte por e-mail</li>
+                        </ul>
+                        <a href="#" class="botao botao-contorno botao-completo">Começar Agora</a>
+                    </div>
+
+                    <!-- Plano Profissional -->
+                    <div class="cartao-preco popular">
+                        <div class="distintivo-popular">Mais Popular</div>
+                        <div class="cabecalho-preco">
+                            <h3>Profissional</h3>
+                            <p>Perfeito para clínicas pequenas e médias.</p>
+                        </div>
+                        <div class="preco">
+                            <span class="valor">R$499</span>
+                            <span class="periodo">/mês</span>
+                        </div>
+                        <ul class="recursos-preco">
+                            <li><i class="fa-solid fa-circle-check"></i> Gerenciador de Tickets Avançado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Até 500 tickets/mês</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Chat IA personalizado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Até 5 usuários</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Integrações (WhatsApp, Email)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Suporte prioritário</li>
+                        </ul>
+                        <a href="#" class="botao botao-primario botao-completo">Começar Agora</a>
+                    </div>
+
+                    <!-- Plano Empresarial -->
+                    <div class="cartao-preco">
+                        <div class="cabecalho-preco">
+                            <h3>Empresarial</h3>
+                            <p>Para hospitais e redes de clínicas.</p>
+                        </div>
+                        <div class="preco">
+                            <span class="valor">R$1299</span>
+                            <span class="periodo">/mês</span>
+                        </div>
+                        <ul class="recursos-preco">
+                            <li><i class=""></i> Gerenciador de Tickets Premium</li>
+                            <li><i class=""></i> Tickets ilimitados</li>
+                            <li><i class=""></i> Chat IA avançado com treinamento</li>
+                            <li><i class=""></i> Usuários ilimitados</li>
+                            <li><i class=""></i> Todas as integrações</li>
+                            <li><i class=""></i> API personalizada</li>
+                            <li><i class=""></i> Suporte 24/7 dedicado</li>
+                            <li><i class=""></i> Onboarding personalizado</li>
+                        </ul>
+                        <a href="#" class="botao botao-contorno botao-completo">Começar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção CTA Final -->
+        <section id="comecar" class="secao-cta">
+            <div class="conteiner">
+                <div class="cabecalho-secao">
+                    <h2>Pronto para Revolucionar seu Atendimento?</h2>
+                    <p>Junte-se a centenas de profissionais de saúde que já estão economizando tempo e melhorando a
+                        satisfação dos pacientes.</p>
+                </div>
+                <div class="botoes-cta">
+                    <a href="dashbord.html" class="botao botao-primario">Comece seu Teste Gratuito 
+                    </a>
+
+                </div>
+                <p class="nota-cta">14 dias grátis. Sem necessidade de cartão de crédito.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="rodape">
+        <div class="conteiner">
+            <div class="grade-rodape">
+                <div class="sobre-rodape">
+                    <div class="logo">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <span>HealthSupport</span>
+                    </div>
+                    <p>Soluções inteligentes para profissionais de saúde atenderem melhor seus pacientes.</p>
+                    <div class="links-sociais">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="links-rodape">
+                    <h3>Produto</h3>
+                    <ul>
+                        <li><a href="dashbord.html">Gerenciador de Tickets</a></li>
+                        <li><a href="#">Chat IA</a></li>
+                        <li><a href="#precos">Preços</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-rodape">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="integrantes.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+
+                <div class="links-rodape">
+                    <h3>Suporte</h3>
+                    <ul>
+                        <li><a href="faq.html">Central de Ajuda</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rodape-inferior">
+                <p>&copy; 2025 HealthSupport. Todos os direitos reservados.</p>
+                <div class="legal-rodape">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Serviço</a>
+                    <a href="#">LGPD</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
