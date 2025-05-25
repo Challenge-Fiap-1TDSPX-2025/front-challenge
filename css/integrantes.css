@@ -3,7 +3,7 @@
 /* Seção de Valores do Sistema */
 .secao-valores {
   padding: 80px 0;
-  background-color: #f9fafb;
+  background-color: #add2f7;
 }
 
 .titulo-secao {
@@ -134,6 +134,12 @@
 }
 
 
+.icone-social{
+  width: 10%;
+}
+.icone-social > img{
+  width: 100%;
+}
 
 .icone-social:hover {
   background-color: #4f46e5;
