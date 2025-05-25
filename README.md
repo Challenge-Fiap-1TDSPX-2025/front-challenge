@@ -23,6 +23,7 @@ Os tickets são organizados e gerenciados por um painel com filtros avançados (
 
 ## 📁 Estrutura de Pastas e Arquivos
 
+```
 /css
 ├── contato.css
 ├── dashbord.css
@@ -31,18 +32,20 @@ Os tickets são organizados e gerenciados por um painel com filtros avançados (
 └── styles.css
 
 /img
-(imagens utilizadas no projeto)
+  (imagens utilizadas no projeto)
 
 /js
 ├── contato.js
 ├── dashbord.js
 └── faq.js
 
-contato.html
-dashbord.html
-faq.html
-index.html
-integrantes.html
+contato.html  
+dashbord.html  
+faq.html  
+index.html  
+integrantes.html  
+
+```
 
 
 ---
