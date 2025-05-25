@@ -19,7 +19,7 @@
             <!-- Perfil do Usuário -->
             <div class="perfil-usuario-sidebar">
                 <div class="avatar-container">
-                    <span class="avatar-icon">👤</span>
+                    <span class="avatar-icon"><img src="img/profile-user.png"></span>
                 </div>
                 <div class="info-usuario">
                     <h3 class="nome-usuario">Carlos Silva</h3>
@@ -29,20 +29,23 @@
 
             <nav class="menu-navegacao">
                 <ul>
-                    <li class="menu-item ativo">
+                   <!--
+                   <li class="menu-item ativo">
                         <span class="icone dashboard-icon">⊞</span>
                         <span>Dashboard</span>
                     </li>
+                    -->
+                    
                     <li class="menu-item">
-                        <span class="icone users-icon">👥</span>
+                        <span class="icone users-icon"><img src="img/group.png"> </span>
                         <span>Usuários</span>
                     </li>
                     <li class="menu-item">
-                        <span class="icone tickets-icon">🎫</span>
+                        <span class="icone tickets-icon"><img src="img/ticket.png"></span>
                         <span>Tickets</span>
                     </li>
                     <li class="menu-item">
-                        <span class="icone settings-icon">⚙️</span>
+                        <span class="icone settings-icon"><img src="img/settings.png"></span>
                         <span>Configurações</span>
                     </li>
                 </ul>
@@ -259,17 +262,15 @@
                             <option value="resolvido">Resolvido</option>
                         </select>
                     </div>
-                    <div class="propriedade">
-                        <label>Prioridade</label>
-                        <select id="prioridade-ticket">
-                            <option value="baixa">Baixa</option>
-                            <option value="media">Média</option>
-                            <option value="alta">Alta</option>
-                            <option value="urgente">Urgente</option>
-                        </select>
+                    
+                    <div class="botoes-propriedades">
+                        <button class="botao-atualizar">Atualizar</button>
+                    <button class="botao-excluir">
+                        <img src="img/trash-can.png" id="lixeira"> 
+                        Excluir Ticket
+                    </button>
                     </div>
-                    <button class="botao-atualizar">Atualizar</button>
-                    <button class="botao-excluir">Excluir Ticket</button>
+                    
 
                 </div>
 
