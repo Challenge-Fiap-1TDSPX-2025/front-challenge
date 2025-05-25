@@ -82,7 +82,7 @@
                             <li><i class="item-card-solucao"></i> Organize tickets por tipo de problema</li>
                             <li><i class="item-card-solucao"></i> Atualize status: aberto, em andamento e fechado</li>
                             <li><i class="item-card-solucao"></i> Priorize atendimentos urgentes</li>
-                            
+
                         </ul>
 
                         <a href="dashbord.html" class="botao botao-contorno botao-completo">Saiba Mais</a>
@@ -127,7 +127,8 @@
                                 <div class="numero-passo">1</div>
                                 <div class="conteudo-passo">
                                     <h4>Receba Dúvidas</h4>
-                                    <p> Todas as dúvidas são organizadas em tickets, permitindo respostas rápidas, acompanhamento centralizado e uma experiência muito mais profissional</p>
+                                    <p> Todas as dúvidas são organizadas em tickets, permitindo respostas rápidas,
+                                        acompanhamento centralizado e uma experiência muito mais profissional</p>
                                 </div>
                             </div>
 
@@ -343,7 +344,7 @@
                             <li><i class="item-card-plano"></i> Até 500 tickets/mês</li>
                             <li><i class="item-card-plano"></i> Chat IA personalizado</li>
                             <li><i class="item-card-plano"></i> Até 5 usuários</li>
-                            
+
                             <li><i class="item-card-plano"></i> Suporte prioritário</li>
                         </ul>
                         <a href="#" class="botao botao-primario botao-completo">Começar Agora</a>
@@ -366,7 +367,7 @@
                             <li><i class="item-card-plano"></i> Usuários ilimitados</li>
                             <li><i class="item-card-plano"></i> Todas as integrações</li>
                             <li><i class="item-card-plano"></i> API personalizada</li>
-                            <li><i class="item-card-plano"></i> Suporte 24/7 dedicado</li>    
+                            <li><i class="item-card-plano"></i> Suporte 24/7 dedicado</li>
                         </ul>
                         <a href="#" class="botao botao-contorno botao-completo">Começar Agora</a>
                     </div>
@@ -383,7 +384,7 @@
                         satisfação dos pacientes.</p>
                 </div>
                 <div class="botoes-cta">
-                    <a href="dashbord.html" class="botao botao-primario">Comece seu Teste Gratuito 
+                    <a href="dashbord.html" class="botao botao-primario">Comece seu Teste Gratuito
                     </a>
 
                 </div>
@@ -446,6 +447,19 @@
             </div>
         </div>
     </footer>
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "e57a72ce-b438-4d7e-9472-7c7fca891ba5", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "7ee18392-1afe-44ee-b5e3-c8f8241674e1", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
 </body>
 
 </html>
