@@ -335,7 +335,7 @@ body {
 }
 
 /* Lista de Tickets */
-.lista-tickets {
+.lista-eventos {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -358,13 +358,17 @@ body {
 
 .ticket-cabecalho {
     display: flex;
-    justify-content: space-between;
+
     margin-bottom: 10px;
+    align-items: center;
 }
 
 .ticket-info {
     display: flex;
+   
     align-items: center;
+    gap:24px;
+    
 }
 
 .ticket-id {
@@ -373,8 +377,13 @@ body {
 }
 
 .ticket-data {
-    font-size: 12px;
+    font-size: 14px;
     color: #777;
+    text-align: center;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .ticket-titulo {
