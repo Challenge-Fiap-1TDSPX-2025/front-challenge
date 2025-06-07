@@ -45,8 +45,6 @@ faq.html
 index.html  
 integrantes.html  
 
-teste de voltar atras no merge
-
 ```
 
 
